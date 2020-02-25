@@ -9,3 +9,14 @@ Usando o [npm](https://www.npmjs.com/).
 npm install
 react-native run-android
 ```
+Usando o [yarn](https://yarnpkg.com/).
+```bash
+yarn install
+react-native run-android
+```
+
+## Ferramentas utilizadas
+* React Native
+* React Native Elements
+* React Hooks
+* Snippets da [Rocketseat](https://rocketseat.com.br/)
