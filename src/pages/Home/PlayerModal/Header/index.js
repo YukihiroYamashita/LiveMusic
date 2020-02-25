@@ -3,7 +3,7 @@ import { Icon } from 'react-native-elements';
 
 import { Container, Title, Artist, Column } from './styles';
 
-export default function Header() {
+export default function Header({ onClosePress }) {
   return (
     <>
       <Container>
@@ -12,6 +12,7 @@ export default function Header() {
           name='chevron-down'
           color='#c7c7c7'
           containerStyle={{ width: 50 }}
+          onPress={onClosePress}
         />
         <Column>
           <Title>TOCANDO DA SUA BIBLIOTECA</Title>

@@ -3,13 +3,13 @@ import { Icon } from 'react-native-elements';
 
 import { Container, Title, Artist, Column } from './styles';
 
-export default function Music() {
+export default function Music({ artist, music }) {
   return (
     <>
       <Container>
         <Column>
-          <Title>One Point Perspective</Title>
-          <Artist>Arctic Monkeys</Artist>
+          <Title>{music}</Title>
+          <Artist>{artist}</Artist>
         </Column>
         <Icon
           type='font-awesome'

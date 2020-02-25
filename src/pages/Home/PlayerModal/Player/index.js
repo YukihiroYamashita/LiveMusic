@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet } from 'react-native';
 import { Icon } from 'react-native-elements';
 
@@ -7,6 +7,8 @@ import { Container, Row } from './styles';
 import Progress from './Progress'
 
 export default function Player() {
+  const [ paused, setPaused ] = useState(false);
+
   return (
     <>
       <Progress/>
@@ -24,10 +26,11 @@ export default function Player() {
         />
         <Icon
           type='font-awesome'
-          name='play'
+          name={ paused ? 'pause' : 'play'}
           color='#000'
           iconStyle={{ marginLeft: 3 }}
           containerStyle={styles.Play}
+          onPress={() => setPaused(!paused)}
         />
         <Icon
           type='font-awesome'

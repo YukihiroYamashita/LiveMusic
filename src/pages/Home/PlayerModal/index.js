@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Dimensions } from 'react-native';
+import { Overlay } from 'react-native-elements';
 
 import { Container, Album, View } from './styles';
 
@@ -7,18 +7,28 @@ import Header from './Header'
 import Music from './Music'
 import Player from './Player'
 
-export const PlayerModal = React.forwardRef(({ style }, ref) => {
+export default function PlayerModal({ visible, onClosePress }) {
   return (
-    <View style={style}>
-      <Header/>
+    <Overlay
+      isVisible={visible}
+      overlayStyle={{ padding: 0 }}
+      fullScreen
+      animationType='slide'
+    >
+      <Header
+        onClosePress={onClosePress}
+      />
       <Container>
         <Album
-          source={{ uri: 'https://armazemdovinil.com/wp-content/uploads/2018/07/7898324315725-LP-ARCTIC-MONKEYS_TRANQUILITY-BASE-HOTEL-CASINO-26.06.18-510x510.jpg' }}
+          source={{ uri: 'https://upload.wikimedia.org/wikipedia/pt/4/4d/Arctic_Monkeys_Humbug.jpg' }}
           resizeMode='stretch'
         />
-        <Music/>
+        <Music
+          artist='Arctic Monkeys'
+          music='Cornerstone'
+        />
         <Player/>
       </Container>
-    </View>
+    </Overlay>
   )
-})
+}

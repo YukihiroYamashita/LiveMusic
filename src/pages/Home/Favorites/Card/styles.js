@@ -15,5 +15,5 @@ export const Title = styled.Text`
 export const Image = styled.Image`
   width: 150px;
   height: 150px;
-  border-radius: 10px;
+  border-radius: 5px;
 `;
