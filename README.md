@@ -1,4 +1,6 @@
-# O LiveMusic é um app clone do Spotify feito com React Native.
+# LiveMusic
+
+O  LiveMusic é um app clone do Spotify feito com <3 com React Native!
 
 ## Instalação
 ```bash
